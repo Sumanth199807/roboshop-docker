@@ -1,0 +1,8 @@
+name: roboshop
+services:
+  mongodb:
+    build: ./mongodb
+    image: sumanthswarna/mongodb:v1
+    container_name: mongodb
+
+  
