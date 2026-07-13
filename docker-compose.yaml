@@ -17,7 +17,7 @@ services:
     image: sumanthswarna/frontend:v1
     container_name: frontend
     ports:
-      -"80-80"
+      - "80:80"
     depends_on:
       - catalogue
       - user
@@ -30,9 +30,9 @@ services:
     image: sumanthswarna/user:v1
     container_name: user
     environment:
-       MONGO:true
-       REDIS_URL:'redis://redis:6379'
-       MONGO_URL:"mongodb://mongodb:27017/users"
+       MONGO: true
+       REDIS_URL: 'redis://redis:6379'
+       MONGO_URL: "mongodb://mongodb:27017/users"
     depends_on:
       - redis
       - mongodb
@@ -41,9 +41,9 @@ services:
     build: ./cart
     image: sumanthswarna/cart:v1
     environment:
-      REDIS_HOSt:redis
-      CATALOGUE_HOST:catalogue
-      CATALOGUE_PORT:8080
+      REDIS_HOST: redis
+      CATALOGUE_HOST: catalogue
+      CATALOGUE_PORT: 8080
 
     depends_on:
       - redis
