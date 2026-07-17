@@ -14,7 +14,7 @@ services:
 
   frontend:
     build: ./frontend
-    image: sumanthswarna/frontend:v1
+    image: sumanthswarna/frontend:v2
     container_name: frontend
     ports:
       - "80:80"
