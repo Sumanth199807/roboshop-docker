@@ -81,7 +81,7 @@ services:
    container_name: redis
 
   mysql:
-   image: sumanthswarna/mysql:v1
+   image: sumanthswarna/mysql:v2
    build: ./mysql
    container_name: mysql
    command:  --mysql-native-password=ON --innodb-lock_wait_timeout=120
